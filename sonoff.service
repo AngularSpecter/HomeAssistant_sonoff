@@ -1,0 +1,9 @@
+[Unit]
+Description=RTL_433 based home security sniffer
+After=syslog.target network.target
+
+[Service]
+Type=simple
+ExecStart=/bin/sh -c '/usr/local/bin/SONOFF.py' 
+Restart=on-failure
+RestartSec=42s
